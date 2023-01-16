@@ -14,6 +14,10 @@ function App() {
     disPatch({type:"INCREMENT",payload:{num:5}}) //무조건 객체 안에 type == 액션의 이름 ,  payload ==> 함수의 매개변수 느낌/ 필요한 정보 전송
   }
 
+  const decrease = () => {
+    disPatch({type:"DECREMENT"}) //무조건 객체 안에 type == 액션의 이름 ,  payload ==> 함수의 매개변수 느낌/ 필요한 정보 전송
+  }
+
   const login = () => {
     disPatch({type:"LOGIN",payload:{id:"giheyodk",passworld:"1234"}})
   }
@@ -22,6 +26,7 @@ function App() {
         <h1>{id},{passworld}</h1>
         <h1>{counter}</h1>
         <button onClick={increase}>증가</button>
+        <button onClick={decrease}>감소</button>
         <button onClick={login}>Login</button>
         <Box/>
     </div>

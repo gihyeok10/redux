@@ -19,6 +19,9 @@ function reducer(state=initialState,action){
         case "INCREMENT":
         return {...state, counter: state.counter +action.payload.num}
 
+        case "DECREMENT":
+        return {...state, counter: state.counter-1}
+
         case "LOGIN":
             return {...state,
                     id:action.payload.id,
